@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Button, Form, InputGroup } from 'react-bootstrap';
 import { FaSearch, FaUser } from 'react-icons/fa';
-import '../App.css';
+import '../../App.css';
 
 const SearchUser = ({ onSearch }) => {
     const [inputUsername, setInputUsername] = useState('');

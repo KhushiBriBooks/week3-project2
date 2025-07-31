@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import SearchUser from './components/SearchUser'
-import GitUserCard from './components/GitUserCard';
-import SpinnerLightMode from './assets/spinner-light.gif';
-import SpinnerDarkMode from './assets/spinner-dark.gif';
-import { useTheme } from './ThemeContext';
-import './App.css';
+import SearchUser from '../features/SearchUser'
+import UserCard from './UserCard';
+import { useTheme } from '../../library/ThemeContext';
+import '../../App.css';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 const GitUserList = () => {
@@ -49,12 +47,12 @@ const GitUserList = () => {
       <SearchUser onSearch={handleSearch} />
       {loading && (
         <img
-          src={theme === 'light' ? SpinnerLightMode : SpinnerDarkMode}
+          src={theme === 'light' ? "/images/spinner-light.gif" : "/images/spinner-dark.gif"}
           className='spinner'
           alt='Loading...'
         />
       )}
-      <GitUserCard user={user} error={error} />
+      <UserCard user={user} error={error} />
     </div>
   )
 }

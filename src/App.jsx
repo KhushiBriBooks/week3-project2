@@ -1,6 +1,6 @@
 import './App.css'
-import GitUserList from './GitUserList'
-import { ThemeProvider } from './ThemeContext'
+import GitUserList from './components/Git/index'
+import { ThemeProvider } from './library/ThemeContext'
 
 function App() {
 

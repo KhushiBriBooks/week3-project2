@@ -1,9 +1,8 @@
 import { Card, Col, Container, Row } from 'react-bootstrap'
 import { FaBuilding, FaLink, FaMapMarkerAlt, FaTwitter, FaUser } from 'react-icons/fa';
-import errorImg from "../assets/404error.png";
-import '../App.css';
+import '../../App.css';
 
-const GitUserCard = ({ user, error }) => {
+const UserCard = ({ user, error }) => {
     const _formatDate = (dateStr) => {
         const date = new Date(dateStr);
         return date.toLocaleDateString('en-GB', {
@@ -18,7 +17,7 @@ const GitUserCard = ({ user, error }) => {
             <Card className="p-4 shadow text-center border rounded-4 error-card">
                 <Card.Body className="d-flex flex-column align-items-center gap-3">
                     <img
-                        src={errorImg}
+                        src="/images/404error.png"
                         alt="404 GitHub Not Found"
                         style={{ maxWidth: '300px', objectFit: 'contain' }}
                     />
@@ -105,4 +104,4 @@ const GitUserCard = ({ user, error }) => {
     )
 }
 
-export default GitUserCard
+export default UserCard
